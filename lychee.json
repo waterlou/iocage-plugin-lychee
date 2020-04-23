@@ -1,5 +1,5 @@
 {
-  "name": "ghost",
+  "name": "lychee",
   "release": "11.3-RELEASE",
   "artifact": "https://github.com/waterlou/iocage-plugin-lychee.git",
   "properties": {
@@ -15,10 +15,10 @@
     "databases/mysql57-server",
     "lang/php74",
     "lang/php74-extensions",
-    "lang/php74-composer",
-    "lang/php74-gd",
-    "lang/php74-json",
-    "security/py-certbot-nginx",
+    "php74-composer",
+    "php74-gd",
+    "php74-json",
+    "security/py37-certbot-nginx",
     "devel/git"
   ],
   "packagesite": "http://pkg.FreeBSD.org/FreeBSD:11:amd64/quarterly",

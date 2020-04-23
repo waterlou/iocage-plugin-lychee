@@ -18,8 +18,8 @@
     "php74-composer",
     "php74-gd",
     "php74-json",
-    "security/py37-certbot-nginx",
-    "devel/git"
+    "py37-certbot-nginx",
+    "git"
   ],
   "packagesite": "http://pkg.FreeBSD.org/FreeBSD:11:amd64/quarterly",
   "fingerprints": {

@@ -2,6 +2,7 @@
 # Start the service
 
 cp /usr/local/etc/php.ini-production /usr/local/etc/php.ini
+# sysrc php_fpm_enable=yes
 service php-fpm start
 
 

@@ -18,6 +18,7 @@
     "php74-composer",
     "php74-gd",
     "php74-json",
+    "php74-mysqli",
     "py37-certbot-nginx",
     "git"
   ],

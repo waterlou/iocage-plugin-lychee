@@ -23,7 +23,7 @@
     "php74-exif",
     "php74-fileinfo",
     "php74-pdo_mysql",
-    "php-ffmpeg",
+    "php74-ffmpeg",
     "py37-certbot-nginx",
     "git"
   ],

@@ -1,10 +1,10 @@
 #!/bin/sh
 
 service nginx stop
-service ghost stop
+service redis stop
 service mysql-server stop
 
 
 service mysql-server start
-service ghost start
+service redis start
 service nginx start

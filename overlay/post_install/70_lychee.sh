@@ -9,25 +9,22 @@ git clone https://github.com/LycheeOrg/Lychee.git .
 
 composer install --no-dev
 
-# chown -R www uploads/ data/
-# chmod -R 750 uploads/ data/
-
-chgrp -R www storage/ public/dist/ public/sym/ public/uploads/
+chown -R www:www storage/ public/dist/ public/sym/ public/uploads/
 chmod -R 755 storage/* app/* public/dist/ public/sym/ public/uploads/ bootstrap/
 chmod 775 .
 
-# CFG=/root/plugin_config
+CFG=/root/plugin_config
 
-# DB=`sysrc -f ${CFG} -n mysql_db`
-# USER=`sysrc -f ${CFG} -n mysql_user`
-# PASS=`sysrc -f ${CFG} -n mysql_pass`
+DB=`sysrc -f ${CFG} -n mysql_db`
+USER=`sysrc -f ${CFG} -n mysql_user`
+PASS=`sysrc -f ${CFG} -n mysql_pass`
 
-# CFG=${LYCHEE_PATH}/data/config.php
-# cp /usr/local/etc/config.php.dist ${CFG}
-# chown www ${CFG}
-# sed -i '' -e "s/__DB__/${DB}/g" ${CFG}
-# sed -i '' -e "s/__USER__/${USER}/g" ${CFG}
-# sed -i '' -e "s/__PASS__/${PASS}/" ${CFG}
+CFG=${LYCHEE_PATH}/.env
+cp ${CFG}.example ${CFG}
+sed -i '' -e "s/DB_DATABASE=homestead/DB_DATABASE=${DB}/g" ${CFG}
+sed -i '' -e "s/DB_USERNAME=homestead/DB_USERNAME=${USER}/g" ${CFG}
+sed -i '' -e "s/DB_PASSWORD=secret/DB_PASSWORD=${PASS}/g" ${CFG}
+sed -i '' -e "s/DB_PORT=3306/DB_SOCKET=\/tmp\/mysql.sock/g" ${CFG}
 
-# php artisan migrate
-# php artisan key:generate
+php artisan migrate
+php artisan key:generate

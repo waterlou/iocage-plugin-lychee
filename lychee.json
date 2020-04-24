@@ -13,12 +13,17 @@
   "pkgs": [
     "www/nginx",
     "databases/mysql57-server",
+    "databases/redis",
     "lang/php74",
     "lang/php74-extensions",
     "php74-composer",
     "php74-gd",
     "php74-json",
     "php74-mysqli",
+    "php74-exif",
+    "php74-fileinfo",
+    "php74-pdo_mysql",
+    "php-ffmpeg",
     "py37-certbot-nginx",
     "git"
   ],
